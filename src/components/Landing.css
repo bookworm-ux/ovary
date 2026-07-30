@@ -1,0 +1,128 @@
+.landing {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.landing-nav-inner {
+  max-width: var(--max-shell);
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--color-brand-strong);
+}
+
+.hero {
+  padding: var(--space-8) var(--space-6) var(--space-7);
+}
+
+.hero-inner {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  margin-top: var(--space-4);
+}
+
+.hero-lede {
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: var(--space-5) auto 0;
+}
+
+.hero-actions {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: var(--color-ink-faint);
+}
+
+.section-block {
+  padding: var(--space-7) var(--space-6);
+  border-top: 1px solid var(--color-border);
+}
+
+.section-inner {
+  max-width: var(--max-content);
+  margin: 0 auto;
+}
+
+.section-steps .section-inner {
+  max-width: var(--max-shell);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.step-card {
+  padding: var(--space-5);
+}
+
+.step-number {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-accent);
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.step-card h3 {
+  margin-bottom: var(--space-2);
+}
+
+.step-card p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.section-disclaimer {
+  background: var(--color-bg-sunken);
+}
+
+.disclaimer-inner p {
+  margin-bottom: 0;
+}
+
+.landing-footer {
+  padding: var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-shell);
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (max-width: 780px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+}

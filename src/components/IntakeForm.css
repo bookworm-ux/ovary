@@ -1,0 +1,185 @@
+.intake {
+  min-height: 100vh;
+  padding: var(--space-7) var(--space-4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: var(--color-bg);
+}
+
+.intake-shell {
+  width: 100%;
+  max-width: 640px;
+  padding: var(--space-6);
+}
+
+.intake-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  gap: var(--space-3);
+}
+
+.intake-progress {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.progress-dot {
+  width: 26px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--color-border);
+}
+
+.progress-dot.done {
+  background: var(--color-brand);
+}
+
+.progress-dot.active {
+  background: var(--color-accent);
+}
+
+.intake-step-title {
+  margin-bottom: var(--space-4);
+}
+
+.step-help {
+  font-size: 0.9rem;
+  margin-bottom: var(--space-4);
+}
+
+.empty-hint {
+  font-size: 0.9rem;
+  color: var(--color-ink-faint);
+  font-style: italic;
+}
+
+.field-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.field input,
+.field select,
+.field textarea {
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.8rem;
+  background: var(--color-bg-raised);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 1px;
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: 1.5;
+}
+
+.repeat-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.repeat-row {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-end;
+  padding: var(--space-3);
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-md);
+}
+
+.repeat-row-wide {
+  flex-wrap: wrap;
+}
+
+.field-inline {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-narrow {
+  flex: 0 0 130px;
+}
+
+.remove-btn {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-3);
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-sunken);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  margin-top: 3px;
+}
+
+.intake-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--space-6);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 560px) {
+  .intake-shell {
+    padding: var(--space-4);
+  }
+  .repeat-row {
+    flex-wrap: wrap;
+  }
+  .field-narrow {
+    flex: 1 1 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .repeat-row-wide {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .repeat-row-wide .field-narrow {
+    flex: 1 1 auto;
+  }
+  .repeat-row-wide .remove-btn {
+    align-self: flex-end;
+  }
+}

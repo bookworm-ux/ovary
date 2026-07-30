@@ -37,8 +37,8 @@ shows a "X/Y claims traced to patient input" badge. Nothing is invented.
 Requires [Node.js](https://nodejs.org/) 18+.
 
 ```bash
-git clone <this-repo-url>
-cd pcos_app
+git clone https://github.com/bookworm-ux/ovary.git
+cd ovary
 npm install
 npm run dev
 ```
